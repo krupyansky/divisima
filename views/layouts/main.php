@@ -67,38 +67,7 @@ AppAsset::register($this);
 				</div>
 			</div>
 		</div>
-		<nav class="main-navbar">
-			<div class="container">
-				<!-- menu -->
-				<ul class="main-menu">
-					<li><a href="<?= \yii\helpers\Url::home() ?>">Главная</a></li>
-					<li><a href="#">Женщинам</a></li>
-					<li><a href="#">Мужчинам</a></li>
-					<li><a href="#">Ювелирка
-						<span class="new">New</span>
-					</a></li>
-					<li><a href="#">Обувь</a>
-						<ul class="sub-menu">
-							<li><a href="#">Кросовки</a></li>
-							<li><a href="#">Сандали</a></li>
-							<li><a href="#">Туфли</a></li>
-							<li><a href="#">Ботинки</a></li>
-							<li><a href="#">Шлепанцы</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Страницы</a>
-						<ul class="sub-menu">
-							<li><a href="./product.html">Product Page</a></li>
-							<li><a href="./category.html">Category Page</a></li>
-							<li><a href="./cart.html">Cart Page</a></li>
-							<li><a href="./checkout.html">Checkout Page</a></li>
-							<li><a href="./contact.html">Contact Page</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Блог</a></li>
-				</ul>
-			</div>
-		</nav>
+		<?= $this->render('//layouts/include/menu_main') ?>
 	</header>
 	<!-- Header section end -->
 
