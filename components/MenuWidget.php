@@ -32,7 +32,7 @@ class MenuWidget extends Widget
 		$menu = \Yii::$app->cache->get('category');
 		if ($menu) return $menu;
 
-		$this->data = Category::find()->select('id, parent_id, title')->indexBy('id')->asArray()->all();
+		$this->data = Category::find()->select('id, parent_id, title, new')->indexBy('id')->asArray()->all();
 		$this->tree = $this->getTree($this->data);
 		if ($this->ul_class) $this->menuHtml = '<ul class="' . $this->ul_class . '">';
 		$this->menuHtml = $this->getMenuHtml($this->tree);

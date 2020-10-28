@@ -10,20 +10,19 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-	<?php $this->registerCsrfMetaTags() ?>
-	<title><?= Html::encode($this->title) ?> | Главная</title>
-	<meta charset="<?= Yii::$app->charset ?>">
-	<meta name="description" content=" Divisima | eCommerce Template">
-	<meta name="keywords" content="divisima, eCommerce, creative, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->
-	<link href="<?= Url::to('@web/img/favicon.ico') ?>" rel="shortcut icon"/>
+    <?php $this->registerCsrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <meta charset="<?= Yii::$app->charset ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <!-- Favicon -->
+    <link href="<?= Url::to('@web/img/favicon.ico') ?>" rel="shortcut icon"/>
 
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-	<?php $this->head() ?>
+    <!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <?php $this->head() ?>
 </head>
 <body>
 	<?php $this->beginBody() ?>
@@ -38,16 +37,16 @@ AppAsset::register($this);
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-2 text-center text-lg-left">
-						<!-- logo -->
-						<a href="<?= Url::home() ?>" class="site-logo">
-							<img src="img/logo.png" alt="">
-						</a>
+                                            <!-- logo -->
+                                            <a href="<?= Url::home() ?>" class="site-logo">
+                                                <?= Html::img("@web/img/logo.png", ['alt' => 'Divisima']) ?>
+                                            </a>
 					</div>
 					<div class="col-xl-6 col-lg-5">
-						<form class="header-search-form">
-							<input type="text" placeholder="Поиск ...">
-							<button><i class="flaticon-search"></i></button>
-						</form>
+                                            <form class="header-search-form" action="<?= Url::to(['category/search']) ?>" method="get">
+                                                    <input type="text" name="search" placeholder="Поиск ...">
+                                                    <button><i class="flaticon-search"></i></button>
+                                            </form>
 					</div>
 					<div class="col-xl-4 col-lg-5">
 						<div class="user-panel">
@@ -77,14 +76,16 @@ AppAsset::register($this);
 	<section class="footer-section">
 		<div class="container">
 			<div class="footer-logo text-center">
-				<a href="index.html"><img src="./img/logo-light.png" alt=""></a>
+				<a href="index.html">
+                                    <?= Html::img("@web/img/logo-light.png", ['alt' => 'Logo Light']) ?>
+                                </a>
 			</div>
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget about-widget">
 						<h2>О нас</h2>
 						<p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
-						<img src="img/cards.png" alt="">
+						<?= Html::img("@web/img/cards.png", ['alt' => 'About Us']) ?>
 					</div>
 				</div>
 				<div class="col-lg-3 col-sm-6">
@@ -112,7 +113,7 @@ AppAsset::register($this);
 						<h2>Последние записи</h2>
 						<div class="fw-latest-post-widget">
 							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
+                                                            <div class="lp-thumb set-bg" data-setbg="<?= Url::to('@web/img/blog-thumbs/1.jpg') ?>"></div>
 								<div class="lp-content">
 									<h6>какую обувь надеть</h6>
 									<span>21 октября, 2018</span>
@@ -120,7 +121,7 @@ AppAsset::register($this);
 								</div>
 							</div>
 							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
+								<div class="lp-thumb set-bg" data-setbg="<?= Url::to('@web/img/blog-thumbs/2.jpg') ?>"></div>
 								<div class="lp-content">
 									<h6>Тренды этого года</h6>
 									<span>21 октября, 2018</span>

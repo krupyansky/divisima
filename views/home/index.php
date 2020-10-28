@@ -78,81 +78,38 @@
 <!-- Features section end -->
 
 <!-- letest product section -->
+<?php if(!empty($last_products)): ?>
 <section class="top-letest-product-section">
 	<div class="container">
 		<div class="section-title">
 			<h2>ПОСЛЕДНИЕ ПРОДУКТЫ</h2>
 		</div>
 		<div class="product-slider owl-carousel">
-			<div class="product-item">
-				<div class="pi-pic">
-					<img src="./img/product/1.jpg" alt="">
-					<div class="pi-links">
-						<a href="#" class="add-card"><i class="flaticon-bag"></i><span>В КОРЗИНУ</span></a>
-						<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-					</div>
-				</div>
-				<div class="pi-text">
-					<h6>$27,59</h6>
-					<p>Яркий Розовый Топ</p>
-				</div>
-			</div>
-			<div class="product-item">
-				<div class="pi-pic">
-					<div class="tag-new">New</div>
-					<img src="./img/product/2.jpg" alt="">
-					<div class="pi-links">
-						<a href="#" class="add-card"><i class="flaticon-bag"></i><span>В КОРЗИНУ</span></a>
-						<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-					</div>
-				</div>
-				<div class="pi-text">
-					<h6>$37,49</h6>
-					<p>Платье в черно-белую полоску</p>
-				</div>
-			</div>
-			<div class="product-item">
-				<div class="pi-pic">
-					<img src="./img/product/3.jpg" alt="">
-					<div class="pi-links">
-						<a href="#" class="add-card"><i class="flaticon-bag"></i><span>В КОРЗИНУ</span></a>
-						<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-					</div>
-				</div>
-				<div class="pi-text">
-					<h6>$32,99</h6>
-					<p>Черный Купальник</p>
-				</div>
-			</div>
-			<div class="product-item">
-					<div class="pi-pic">
-						<img src="./img/product/4.jpg" alt="">
-						<div class="pi-links">
-							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>В КОРЗИНУ</span></a>
-							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$39,99</h6>
-						<p>Черный Жакет</p>
-					</div>
-				</div>
-			<div class="product-item">
-					<div class="pi-pic">
-						<img src="./img/product/6.jpg" alt="">
-						<div class="pi-links">
-							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>В КОРЗИНУ</span></a>
-							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$25,49</h6>
-						<p>Белый Топ</p>
-					</div>
-				</div>
+                    <?php foreach ($last_products as $last_product): ?>
+                        <div class="product-item">
+                                <div class="pi-pic">
+                                    <?php if($last_product->is_new): ?>
+                                    <div class="tag-new">New</div>
+                                    <?php endif; ?>
+                                    <?= \yii\helpers\Html::img("@web/products/{$last_product->img}", ['alt' => $last_product->title]) ?>
+                                    <div class="pi-links">
+                                        <a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $last_product->id]) ?>" class="add-card">
+                                            <i class="flaticon-bag"></i>
+                                            <span>В КОРЗИНУ</span>
+                                        </a>
+                                        <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="pi-text">
+                                        <h6>$<?= $last_product->price ?></h6>
+                                        <p><?= $last_product->title ?></p>
+                                </div>
+                        </div>
+                    <?php endforeach; ?>
 		</div>
 	</div>
 </section>
+<?php endif; ?>
 <!-- letest product section end -->
 
 <!-- Product filter section -->

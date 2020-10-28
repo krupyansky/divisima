@@ -1,6 +1,7 @@
 <li>
 	<a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $category['id']]) ?>">
 		<?= $category['title'] ?>
+            <?php if ($category['new']) echo "<span class='new'>New</span>" ?>
 	</a>
 	<?php if(isset($category['children'])): ?>
 		<ul class="sub-menu">
