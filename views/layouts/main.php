@@ -25,52 +25,75 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
-	<?php $this->beginBody() ?>
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
+    <?php $this->beginBody() ?>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
 
-	<!-- Header section -->
-	<header class="header-section">
-		<div class="header-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-2 text-center text-lg-left">
-                                            <!-- logo -->
-                                            <a href="<?= Url::home() ?>" class="site-logo">
-                                                <?= Html::img("@web/img/logo.png", ['alt' => 'Divisima']) ?>
-                                            </a>
-					</div>
-					<div class="col-xl-6 col-lg-5">
-                                            <form class="header-search-form" action="<?= Url::to(['category/search']) ?>" method="get">
-                                                    <input type="text" name="search" placeholder="Поиск ...">
-                                                    <button><i class="flaticon-search"></i></button>
-                                            </form>
-					</div>
-					<div class="col-xl-4 col-lg-5">
-						<div class="user-panel">
-							<div class="up-item">
-								<i class="flaticon-profile"></i>
-								<a href="#">Авторизоваться</a> | <a href="#">Создать аккаунт</a>
-							</div>
-							<div class="up-item">
-								<div class="shopping-card">
-									<i class="flaticon-bag"></i>
-									<span>0</span>
-								</div>
-								<a href="#">Корзина</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<?= $this->render('//layouts/include/menu_main') ?>
-	</header>
-	<!-- Header section end -->
+    <!-- Header section -->
+    <header class="header-section">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 text-center text-lg-left">
+                        <!-- logo -->
+                        <a href="<?= Url::home() ?>" class="site-logo">
+                            <?= Html::img("@web/img/logo.png", ['alt' => 'Divisima']) ?>
+                        </a>
+                    </div>
+                    <div class="col-xl-6 col-lg-5">
+                        <form class="header-search-form" action="<?= Url::to(['category/search']) ?>" method="get">
+                            <input type="text" name="search" placeholder="Поиск ...">
+                            <button><i class="flaticon-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="user-panel">
+                            <div class="up-item">
+                                <i class="flaticon-profile"></i>
+                                <a href="#">Авторизоваться</a> | <a href="#">Создать аккаунт</a>
+                            </div>                           
+                            <div class="up-item">
+                                <div class="shopping-card">
+                                    <i class="flaticon-bag"></i>
+                                    <span class="cart-qty">
+                                        <?= $_SESSION['cart.qty'] ?? '0' ?>
+                                    </span>
+                                </div>
+                                <!-- <a href="#">Корзина</a>-->
+                                <button onclick="getCart()" style="padding:0; font-size: 14px;" type="button" class="btn" data-toggle="modal" data-target="#modal-cart">
+                                    Корзина
+                                </button>
+                            </div>
+                            <div class="modal fade" id="modal-cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body"></div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Продолжить покупки</button>
+                                            <a href="<?= Url::to(['cart/view']) ?>" class="btn btn-success">Оформить заказ</a>
+                                            <button onclick="clearCart()" type="button" class="btn btn-danger">Очистить корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?= $this->render('//layouts/include/menu_main') ?>
+    </header>
+    <!-- Header section end -->
 
-	<?= $content ?>
+    <?= $content ?>
 
 	<!-- Footer section -->
 	<section class="footer-section">
