@@ -182,23 +182,45 @@ $(window).on('load', function() {
 	/*-------------------
 		Quantity change
 	--------------------- */
-    var proQty = $('.pro-qty');
+    let proQty = $('.pro-qty');
 	proQty.prepend('<span class="dec qtybtn">-</span>');
 	proQty.append('<span class="inc qtybtn">+</span>');
 	proQty.on('click', '.qtybtn', function () {
-		var $button = $(this);
-		var oldValue = $button.parent().find('input').val();
-		if ($button.hasClass('inc')) {
-			var newVal = parseFloat(oldValue) + 1;
-		} else {
-			// Don't allow decrementing below zero
-			if (oldValue > 0) {
-				var newVal = parseFloat(oldValue) - 1;
-			} else {
-				newVal = 0;
-			}
-		}
-		$button.parent().find('input').val(newVal);
+            let $button = $(this),
+                id = $button.parent().data('id'),
+                // newVal = 0,
+                oldValue = $button.parent().find('input').val(),
+                qty = 0;
+            $('.cart-table .overlay').fadeIn();
+            
+            if ($button.hasClass('inc')) {
+                // newVal = parseFloat(oldValue) + 1;
+                qty = 1;
+            } else {
+                // Don't allow decrementing below zero
+                if (oldValue > 0) {
+                    // newVal = parseFloat(oldValue) - 1;
+                    qty = -1;
+                } else {
+                    // newVal = 0;
+                    qty = 0;
+                }
+            }
+            
+            $.ajax({
+                url: 'cart/change-cart',
+                data: {id: id, qty: qty},
+                type: 'GET',
+                success: function(res){
+                    if(!res) alert('Ошибка изменения кол-ва товара!');
+                    document.location = 'cart/view';
+                },
+                error: function(){
+                    alert('Попробуйте позже!');
+                }
+            });
+            
+            // $button.parent().find('input').val(newVal);
 	});
 
 
@@ -288,6 +310,12 @@ $('#modal-cart .modal-body').on('click', '.del-item', function(){
        type: 'GET',
        success: function(res){
            if(!res) alert('Невозможно удалить товар!');
+           let now_location = document.location.pathname;
+           if(now_location == '/cart/view'){
+               document.location = 'cart/view';
+           }else if(now_location == '/cart/checkout'){
+               document.location = 'cart/checkout';
+           }
            showCart(res);
        },
        error: function(){
@@ -295,3 +323,5 @@ $('#modal-cart .modal-body').on('click', '.del-item', function(){
        }
     });
 });
+
+

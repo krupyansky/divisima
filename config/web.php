@@ -16,6 +16,16 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'sourcePath' => null,   // не опубликовывать комплект
+                    'js' => [
+                        'js/jquery-3.2.1.min.js',
+                    ]
+                ],
+            ],
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'pBOEYw3S0EJxE4Q12bVme8f3jti-8dLM',
@@ -36,7 +46,15 @@ $config = [
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
-            'useFileTransport' => true,
+            'useFileTransport' => true, // false
+//            'transport' => [
+//                'class' => 'Swift_SmtpTransport',
+//                'host' => '', // smtp.gmail.com
+//                'username' => '',
+//                'password' => '',
+//                'port' => '',
+//                'encryption' => 'ssl',
+//            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
