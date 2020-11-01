@@ -20,7 +20,7 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i',
+        '//fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i',
         'css/bootstrap.min.css',
         'css/font-awesome.min.css',
         'css/flaticon.css',
@@ -31,7 +31,6 @@ class AppAsset extends AssetBundle
         'css/style.css',
     ];
     public $js = [
-//        'js/jquery-3.2.1.min.js',
         'js/bootstrap.min.js',
         'js/jquery.slicknav.min.js',
         'js/owl.carousel.min.js',

@@ -198,7 +198,7 @@ AppAsset::register($this);
 	</section>
 	<!-- Footer section end -->
 
-	<?php $this->endBody() ?>
-	</body>
+<?php $this->endBody() ?>
+</body>
 </html>
 <?php $this->endPage() ?>
