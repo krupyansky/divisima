@@ -19,12 +19,10 @@ class MainController extends AppAdminController
     public function actionIndex()
     {
         $this->setMeta(\Yii::$app->name . "::Admin | Главная");
-        return $this->render('index');
-    }
-    
-    public function actionTest()
-    {
-        return $this->render('test');
+        $orders = \app\modules\admin\models\Order::find()->count();
+        $products = \app\modules\admin\models\Product::find()->count();
+        $categories = \app\modules\admin\models\Category::find()->count();
+        return $this->render('index', compact('orders', 'products', 'categories'));
     }
     
 }

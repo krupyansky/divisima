@@ -8,8 +8,6 @@
 
 namespace app\modules\admin\controllers;
 
-use yii\filters\AccessControl;
-
 /**
  * Description of AppAdminController
  *
@@ -17,26 +15,6 @@ use yii\filters\AccessControl;
  */
 class AppAdminController extends \yii\web\Controller
 {
-    
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::class,
-                'rules' => [
-                    [
-                        'allow' => true,
-                        'actions' => ['login'],
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-        ];
-    }
     
     protected function setMeta($title = null, $keywords = null, $description = null) 
     {
