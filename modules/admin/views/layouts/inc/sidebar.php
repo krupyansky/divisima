@@ -43,6 +43,28 @@
             <li><a href="<?= \yii\helpers\Url::to(['order/create']) ?>">Создать заказ</a></li>
           </ul>
         </li>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-bars"></i> <span>Категории</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a href="<?= \yii\helpers\Url::to(['category/index']) ?>">Список категорий</a></li>
+            <li><a href="<?= \yii\helpers\Url::to(['category/create']) ?>">Создать категорию</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-refresh"></i> <span>Товары</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+              <li><a href="<?= \yii\helpers\Url::to(['product/index']) ?>">Список товаров</a></li>
+            <li><a href="<?= \yii\helpers\Url::to(['product/create']) ?>">Создать товар</a></li>
+          </ul>
+        </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
