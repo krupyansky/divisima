@@ -155,7 +155,7 @@
                                         <?php if($product->is_new): ?>
                                             <div class="tag-new">new</div>
                                         <?php endif; ?>
-                                        <?= \yii\helpers\Html::img("@web/products/{$product->img}", ['alt' => $product->title]) ?>
+                                        <?= \yii\helpers\Html::img("@web/{$product->img}", ['alt' => $product->title]) ?>
                                         <div class="pi-links">
                                             <a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $product->id]) ?>" class="add-card">
                                                 <i class="flaticon-bag"></i>

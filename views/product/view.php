@@ -21,7 +21,7 @@
 		<div class="row">
 			<div class="col-lg-6">
                             <div class="product-pic-zoom">
-                                <?= \yii\helpers\Html::img("@web/products/{$product->img}", ['alt' => $product->title, 'class' => 'product-big-img']) ?>
+                                <?= \yii\helpers\Html::img("@web/{$product->img}", ['alt' => $product->title, 'class' => 'product-big-img']) ?>
                                 <!--<img class="product-big-img" src="img/single-product/1.jpg" alt="">-->
                             </div>
                             <!--<div class="product-thumbs" tabindex="1" style="overflow: hidden; outline: none;">

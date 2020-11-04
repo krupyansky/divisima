@@ -91,7 +91,7 @@
                                     <?php if($last_product->is_new): ?>
                                     <div class="tag-new">New</div>
                                     <?php endif; ?>
-                                    <?= \yii\helpers\Html::img("@web/products/{$last_product->img}", ['alt' => $last_product->title]) ?>
+                                    <?= \yii\helpers\Html::img("@web/{$last_product->img}", ['alt' => $last_product->title]) ?>
                                     <div class="pi-links">
                                         <a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $last_product->id]) ?>" class="add-card">
                                             <i class="flaticon-bag"></i>

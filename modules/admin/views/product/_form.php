@@ -2,6 +2,11 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use mihaildev\ckeditor\CKEditor;
+use mihaildev\elfinder\ElFinder;
+use kartik\file\FileInput;
+//
+mihaildev\elfinder\Assets::noConflict($this);
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Product */
@@ -28,7 +33,13 @@ use yii\widgets\ActiveForm;
         <div><div class="help-block"></div></div>       
     </div>
 
-    <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
+    <?//= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
+    
+    <?= 
+        $form->field($model, 'content')->widget(CKEditor::class, [
+            'editorOptions' => ElFinder::ckeditorOptions(['elfinder'],[/* Some CKEditor Options */]),
+        ]);
+    ?>
 
     <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
 
@@ -38,7 +49,17 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'keywords')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'img')->textInput(['maxlength' => true]) ?>
+    <?//= $form->field($model, 'img')->textInput(['maxlength' => true]) ?>
+    
+    <?php 
+        echo $form->field($model, 'file')->widget(FileInput::class, [
+            'options' => ['accept' => 'image/*'],
+            'pluginOptions' => [
+                'showCaption' => false,
+                'showUpload' => false,
+            ],
+        ]);
+    ?>
 
     <?= $form->field($model, 'is_last')->dropDownList(['Нет', 'Да']) ?>
 
@@ -47,7 +68,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'is_sale')->dropDownList(['Нет', 'Да']) ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

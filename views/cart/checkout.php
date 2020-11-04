@@ -124,7 +124,7 @@
                                             <?php foreach($session['cart'] as $id => $item): ?>
 						<li>
                                                     <div class="pl-thumb">
-                                                        <?= \yii\helpers\Html::img("@web/products/{$item['img']}", ['alt' => $item['title']]) ?>
+                                                        <?= \yii\helpers\Html::img("@web/{$item['img']}", ['alt' => $item['title']]) ?>
                                                     </div>
                                                     <h6><?= $item['title'] ?></h6>
                                                     <p>Цена: $<?= $item['price'] ?></p>

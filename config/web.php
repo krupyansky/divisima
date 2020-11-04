@@ -89,6 +89,16 @@ $config = [
         ],
     ],
     'params' => $params,
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => 'mihaildev\elfinder\PathController',
+            'access' => ['@'],
+            'root' => [
+                'path' => 'upload/files',
+                'name' => 'Files'
+            ],
+        ]
+    ],
 ];
 
 if (YII_ENV_DEV) {
