@@ -2,7 +2,6 @@
 
 namespace app\modules\admin\models;
 
-//use Yii;
 use app\modules\admin\models\Order;
 
 /**

@@ -35,7 +35,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_at:datetime',
             'qty',
             'total',
-            //'status',
             [
                 'attribute' => 'status',
                 'value' => $model->status ? '<span class="text-green">Закрыт</span>' : '<span class="text-red">Новый</span>',

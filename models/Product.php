@@ -1,23 +1,15 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace app\models;
 
 use yii\db\ActiveRecord;
 
 /**
- * Description of Product
+ * Модель, отвечающая за работу продуктов
  *
- * @author Krupy
  */
 class Product extends ActiveRecord
 {
-    
     public static function tableName() 
     {
         return 'product';
@@ -27,5 +19,4 @@ class Product extends ActiveRecord
     {
         return $this->hasOne(Category::class, ['id' => 'category_id']);
     }
-    
 }

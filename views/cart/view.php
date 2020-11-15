@@ -10,17 +10,14 @@
 </div>
 <!-- Page info end -->
 
-
 <!-- cart section end -->
-
 <section class="cart-section spad">
     <div class="container">
         <div class="row">
             <?php if(!empty($session['cart'])): ?>
             <div class="col-lg-8">
                 <div class="cart-table">
-                    <div class="overlay">
-                    </div>
+                    <div class="overlay"></div>
                     <h3>Корзина</h3>
                     <div class="cart-table-warp">    
                         <table>
@@ -35,24 +32,24 @@
                             <tbody>
                                 <?php foreach($session['cart'] as $id => $item): ?>
                                 <tr>
-                                        <td class="product-col">
-                                            <a href="<?= yii\helpers\Url::to(['product/view', 'id' => $id]) ?>">
-                                                <?= \yii\helpers\Html::img("@web/{$item['img']}", ['alt' => $item['title']]) ?>
-                                            </a>
-                                                <div class="pc-title">
-                                                        <h4><?= $item['title'] ?></h4>
-                                                        <p>$<?= $item['price'] ?></p>
-                                                </div>
-                                        </td>
-                                        <td class="quy-col">
-                                                <div class="quantity">
-                                <div class="pro-qty" data-id="<?= $id ?>">
-                                                                <input type="text" value="<?= $item['qty'] ?>">
-                                                        </div>
-                                </div>
-                                        </td>
-                                        <!--<td class="size-col"><h4>Size M</h4></td>-->
-                                        <td class="total-col"><h4>$<?= $item['qty'] * $item['price'] ?></h4></td>
+                                    <td class="product-col">
+                                        <a href="<?= yii\helpers\Url::to(['product/view', 'id' => $id]) ?>">
+                                            <?= \yii\helpers\Html::img("@web/{$item['img']}", ['alt' => $item['title']]) ?>
+                                        </a>
+                                        <div class="pc-title">
+                                            <h4><?= $item['title'] ?></h4>
+                                            <p>$<?= $item['price'] ?></p>
+                                        </div>
+                                    </td>
+                                    <td class="quy-col">
+                                        <div class="quantity">
+                                            <div class="pro-qty" data-id="<?= $id ?>">
+                                                <input type="text" value="<?= $item['qty'] ?>">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <!--<td class="size-col"><h4>Size M</h4></td>-->
+                                    <td class="total-col"><h4>$<?= $item['qty'] * $item['price'] ?></h4></td>
                                 </tr>
                                 <?php endforeach; ?>
                             </tbody>
@@ -84,7 +81,7 @@
 <section class="related-product-section">
     <div class="container">
         <div class="section-title text-uppercase">
-                <h2>Продолжить покупки</h2>
+            <h2>Продолжить покупки</h2>
         </div>
         <div class="row">
             <div class="col-lg-3 col-sm-6">
@@ -104,49 +101,49 @@
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
-                    <div class="product-item">
-                            <div class="pi-pic">
-                                    <img src="./img/product/5.jpg" alt="">
-                                    <div class="pi-links">
-                                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                                    </div>
-                            </div>
-                            <div class="pi-text">
-                                    <h6>$35,00</h6>
-                                    <p>Flamboyant Pink Top </p>
-                            </div>
+                <div class="product-item">
+                    <div class="pi-pic">
+                        <img src="./img/product/5.jpg" alt="">
+                        <div class="pi-links">
+                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                        </div>
                     </div>
+                    <div class="pi-text">
+                        <h6>$35,00</h6>
+                        <p>Flamboyant Pink Top </p>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-3 col-sm-6">
-                    <div class="product-item">
-                            <div class="pi-pic">
-                                    <img src="./img/product/9.jpg" alt="">
-                                    <div class="pi-links">
-                                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                                    </div>
-                            </div>
-                            <div class="pi-text">
-                                    <h6>$35,00</h6>
-                                    <p>Flamboyant Pink Top </p>
-                            </div>
+                <div class="product-item">
+                    <div class="pi-pic">
+                        <img src="./img/product/9.jpg" alt="">
+                        <div class="pi-links">
+                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                        </div>
                     </div>
+                    <div class="pi-text">
+                        <h6>$35,00</h6>
+                        <p>Flamboyant Pink Top</p>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-3 col-sm-6">
-                    <div class="product-item">
-                            <div class="pi-pic">
-                                    <img src="./img/product/1.jpg" alt="">
-                                    <div class="pi-links">
-                                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                                    </div>
-                            </div>
-                            <div class="pi-text">
-                                    <h6>$35,00</h6>
-                                    <p>Flamboyant Pink Top </p>
-                            </div>
+                <div class="product-item">
+                    <div class="pi-pic">
+                        <img src="./img/product/1.jpg" alt="">
+                        <div class="pi-links">
+                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                        </div>
                     </div>
+                    <div class="pi-text">
+                        <h6>$35,00</h6>
+                        <p>Flamboyant Pink Top </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

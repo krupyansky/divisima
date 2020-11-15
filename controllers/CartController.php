@@ -1,26 +1,18 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace app\controllers;
 
 use app\models\Product;
-use \app\models\Cart;
+use app\models\Cart;
 use app\models\Order;
 use app\models\OrderProduct;
 
 /**
- * Description of CartController
+ * Контроллер, отвечающий за работу корзины
  *
- * @author Krupy
  */
 class CartController extends AppController
 {
-    
     public function actionAdd($id) 
     {
         $product = Product::findOne($id);
@@ -123,7 +115,4 @@ class CartController extends AppController
         
         return $this->render('checkout', compact('session', 'order'));
     }
-    
-    
-    
 }

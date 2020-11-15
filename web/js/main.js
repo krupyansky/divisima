@@ -323,5 +323,3 @@ $('#modal-cart .modal-body').on('click', '.del-item', function(){
        }
     });
 });
-
-

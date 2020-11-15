@@ -17,8 +17,6 @@ mihaildev\elfinder\Assets::noConflict($this);
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?//= $form->field($model, 'category_id')->textInput() ?>
-
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
     
     <div class="form-group field-product-category_id">
@@ -32,8 +30,6 @@ mihaildev\elfinder\Assets::noConflict($this);
         </select> 
         <div><div class="help-block"></div></div>       
     </div>
-
-    <?//= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
     
     <?= 
         $form->field($model, 'content')->widget(CKEditor::class, [

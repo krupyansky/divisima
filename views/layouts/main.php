@@ -19,8 +19,8 @@ AppAsset::register($this);
     <link href="<?= Url::to('@web/img/favicon.ico') ?>" rel="shortcut icon"/>
 
     <!--[if lt IE 9]>
-              <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <?php $this->head() ?>
 </head>
@@ -95,108 +95,108 @@ AppAsset::register($this);
 
     <?= $content ?>
 
-	<!-- Footer section -->
-	<section class="footer-section">
-		<div class="container">
-			<div class="footer-logo text-center">
-				<a href="index.html">
-                                    <?= Html::img("@web/img/logo-light.png", ['alt' => 'Logo Light']) ?>
-                                </a>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>О нас</h2>
-						<p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
-						<?= Html::img("@web/img/cards.png", ['alt' => 'About Us']) ?>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>Меню</h2>
-						<ul>
-							<li><a href="">О нас</a></li>
-							<li><a href="">Отслеживание заказа</a></li>
-							<li><a href="">Возврат</a></li>
-							<li><a href="">Вакансии</a></li>
-							<li><a href="">Доставка</a></li>
-							<li><a href="">Блог</a></li>
-						</ul>
-						<ul>
-							<li><a href="">Партнеры</a></li>
-							<li><a href="">Блогеры</a></li>
-							<li><a href="">Поддержка</a></li>
-							<li><a href="">Пользовательское соглашение</a></li>
-							<li><a href="">Пресса</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>Последние записи</h2>
-						<div class="fw-latest-post-widget">
-							<div class="lp-item">
-                                                            <div class="lp-thumb set-bg" data-setbg="<?= Url::to('@web/img/blog-thumbs/1.jpg') ?>"></div>
-								<div class="lp-content">
-									<h6>какую обувь надеть</h6>
-									<span>21 октября, 2018</span>
-									<a href="#" class="readmore">Читать</a>
-								</div>
-							</div>
-							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="<?= Url::to('@web/img/blog-thumbs/2.jpg') ?>"></div>
-								<div class="lp-content">
-									<h6>Тренды этого года</h6>
-									<span>21 октября, 2018</span>
-									<a href="#" class="readmore">Читать</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget contact-widget">
-						<h2>Контакты</h2>
-						<div class="con-info">
-							<span>C.</span>
-							<p>Divisima Company Ltd</p>
-						</div>
-						<div class="con-info">
-							<span>B.</span>
-							<p>Парк Александровский, 1, Санкт-Петербург, 197198</p>
-						</div>
-						<div class="con-info">
-							<span>T.</span>
-							<p>+7 (999) 999 99-99</p>
-						</div>
-						<div class="con-info">
-							<span>E.</span>
-							<p>office@email.com</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="social-links-warp">
-			<div class="container">
-				<div class="social-links">
-					<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
-					<a href="" class="google-plus"><i class="fa fa-google-plus"></i><span>g+plus</span></a>
-					<a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
-					<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
-					<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
-					<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
-					<a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
-				</div>
+    <!-- Footer section -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="footer-logo text-center">
+                <a href="index.html">
+                    <?= Html::img("@web/img/logo-light.png", ['alt' => 'Logo Light']) ?>
+                </a>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget about-widget">
+                        <h2>О нас</h2>
+                        <p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
+                        <?= Html::img("@web/img/cards.png", ['alt' => 'About Us']) ?>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget about-widget">
+                        <h2>Меню</h2>
+                        <ul>
+                            <li><a href="">О нас</a></li>
+                            <li><a href="">Отслеживание заказа</a></li>
+                            <li><a href="">Возврат</a></li>
+                            <li><a href="">Вакансии</a></li>
+                            <li><a href="">Доставка</a></li>
+                            <li><a href="">Блог</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">Партнеры</a></li>
+                            <li><a href="">Блогеры</a></li>
+                            <li><a href="">Поддержка</a></li>
+                            <li><a href="">Пользовательское соглашение</a></li>
+                            <li><a href="">Пресса</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget about-widget">
+                        <h2>Последние записи</h2>
+                        <div class="fw-latest-post-widget">
+                            <div class="lp-item">
+                                <div class="lp-thumb set-bg" data-setbg="<?= Url::to('@web/img/blog-thumbs/1.jpg') ?>"></div>
+                                <div class="lp-content">
+                                    <h6>какую обувь надеть</h6>
+                                    <span>21 октября, 2018</span>
+                                    <a href="#" class="readmore">Читать</a>
+                                </div>
+                            </div>
+                            <div class="lp-item">
+                                <div class="lp-thumb set-bg" data-setbg="<?= Url::to('@web/img/blog-thumbs/2.jpg') ?>"></div>
+                                <div class="lp-content">
+                                    <h6>Тренды этого года</h6>
+                                    <span>21 октября, 2018</span>
+                                    <a href="#" class="readmore">Читать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget contact-widget">
+                        <h2>Контакты</h2>
+                        <div class="con-info">
+                            <span>C.</span>
+                            <p>Divisima Company Ltd</p>
+                        </div>
+                        <div class="con-info">
+                            <span>B.</span>
+                            <p>Парк Александровский, 1, Санкт-Петербург, 197198</p>
+                        </div>
+                        <div class="con-info">
+                            <span>T.</span>
+                            <p>+7 (999) 999 99-99</p>
+                        </div>
+                        <div class="con-info">
+                            <span>E.</span>
+                            <p>office@email.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="social-links-warp">
+            <div class="container">
+                <div class="social-links">
+                    <a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+                    <a href="" class="google-plus"><i class="fa fa-google-plus"></i><span>g+plus</span></a>
+                    <a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
+                    <a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
+                    <a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
+                    <a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
+                    <a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
+                </div>
 
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> 
-	<p class="text-white text-center mt-5">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-			</div>
-		</div>
-	</section>
-	<!-- Footer section end -->
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> 
+                <p class="text-white text-center mt-5">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+        </div>
+    </section>
+    <!-- Footer section end -->
 
 <?php $this->endBody() ?>
 </body>

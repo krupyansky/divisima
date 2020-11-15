@@ -9,7 +9,7 @@
 namespace app\assets;
 
 /**
- * Description of AdminAsset
+ * Класс ресурсов для модуля админки.
  *
  * @author Krupy
  */

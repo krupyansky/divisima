@@ -1,24 +1,16 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace app\models;
 
 use yii\db\ActiveRecord;
 
 /**
- * Description of OrderProduct
+ * Модель, отвечающая за формирование таблица order_product
  *
- * @author Krupy
  */
 class OrderProduct extends ActiveRecord
 {
-    
-    public static function tableName(): string 
+    public static function tableName()
     {
         return 'order_product';
     }
@@ -50,5 +42,4 @@ class OrderProduct extends ActiveRecord
         }
         return true;
     }
-    
 }

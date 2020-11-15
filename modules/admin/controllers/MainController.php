@@ -1,21 +1,13 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace app\modules\admin\controllers;
 
 /**
- * Description of MainController
+ * Контроллер, отвечающий за работу главной страницы админки
  *
- * @author Krupy
  */
 class MainController extends AppAdminController
 {
-    
     public function actionIndex()
     {
         $this->setMeta(\Yii::$app->name . "::Admin | Главная");
@@ -24,5 +16,4 @@ class MainController extends AppAdminController
         $categories = \app\modules\admin\models\Category::find()->count();
         return $this->render('index', compact('orders', 'products', 'categories'));
     }
-    
 }

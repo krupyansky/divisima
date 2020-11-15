@@ -1,23 +1,15 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace app\models;
 
 use yii\base\Model;
 
 /**
- * Description of Cart
+ * Модель, отвечающая за работу корзины
  *
- * @author Krupy
  */
 class Cart extends Model
 {
-    
     public function addToCart($product, $qty = 1) 
     {
         if ($qty == '-1'){
@@ -25,9 +17,9 @@ class Cart extends Model
         } else {
             $qty = 1;
         }
-        if(isset($_SESSION['cart'][$product->id])){
+        if (isset($_SESSION['cart'][$product->id])){
             $_SESSION['cart'][$product->id]['qty'] += $qty;
-        }else {
+        } else {
             $_SESSION['cart'][$product->id] = [
                 'title' => $product->title,
                 'price' => $product->price,
@@ -37,7 +29,7 @@ class Cart extends Model
         }
         $_SESSION['cart.qty'] = isset($_SESSION['cart.qty']) ? $_SESSION['cart.qty'] + $qty : $qty;
         $_SESSION['cart.sum'] = isset($_SESSION['cart.sum']) ? $_SESSION['cart.sum'] + $qty * $product->price : $qty * $product->price;
-        if($_SESSION['cart'][$product->id]['qty'] == 0){
+        if ($_SESSION['cart'][$product->id]['qty'] == 0){
             unset($_SESSION['cart'][$product->id]);
         }
     }
@@ -52,6 +44,5 @@ class Cart extends Model
         $_SESSION['cart.qty'] -= $qtyMinus;
         $_SESSION['cart.sum'] -= $sumMinus;
         unset($_SESSION['cart'][$id]);
-    }
-    
+    } 
 }

@@ -30,7 +30,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            //'parent_id',
             [
                 'attribute' => 'parent_id',
                 'value' => isset($model->category->title) ? '<a href="' . \yii\helpers\Url::to(['category/view', 'id' => $model->category->id]) . '">' . $model->category->title . '</a>' : 'Родительская категория',

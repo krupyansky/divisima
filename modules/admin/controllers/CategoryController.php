@@ -128,7 +128,7 @@ class CategoryController extends AppAdminController
         if (($model = Category::findOne($id)) !== null) {
             return $model;
         }
-
-        throw new NotFoundHttpException('The requested page does not exist.');
+        
+        throw new NotFoundHttpException('Запрашиваемая страница не существует.');
     }
 }

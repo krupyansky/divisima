@@ -11,7 +11,6 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="small-box bg-green">
             <div class="inner">
               <h3><?= $products ?></h3>
-
               <p>Продуктов</p>
             </div>
             <div class="icon">

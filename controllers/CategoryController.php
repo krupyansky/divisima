@@ -1,24 +1,16 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace app\controllers;
 
 use app\models\Category;
 use app\models\Product;
 
 /**
- * Description of CategoryController
+ * Контроллер, отвечающий за отображение категорий и поиск товаров
  *
- * @author Krupy
  */
 class CategoryController extends AppController
 {
-    
     public function actionView($id)
     {
         $category = Category::findOne($id);
@@ -40,5 +32,4 @@ class CategoryController extends AppController
         $products = Product::find()->where(['like', 'title', $search])->all();
         return $this->render('search', compact('products', 'search'));
     }
-    
 }

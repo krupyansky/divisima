@@ -9,9 +9,8 @@
 namespace app\assets;
 
 /**
- * Description of AuthAsset
+ * Класс ресурсов для страницы авторизации.
  *
- * @author Krupy
  */
 class AuthAsset extends \yii\web\AssetBundle
 {
